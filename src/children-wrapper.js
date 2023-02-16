@@ -1,9 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default class InputMaskChildrenWrapper extends React.Component {
-  render() {
-    // eslint-disable-next-line react/prop-types
-    const { children, ...props } = this.props;
-    return React.cloneElement(children, props);
+const InputMaskChildrenWrapper = React.forwardRef(
+  function InputMaskChildrenWrapper(props, ref) {
+    const { children, ...rest } = props;
+    return <div ref={ref}>{React.cloneElement(children, rest)}</div>;
   }
-}
+);
+
+InputMaskChildrenWrapper.propTypes = {
+  children: PropTypes.node
+};
+
+export default InputMaskChildrenWrapper;

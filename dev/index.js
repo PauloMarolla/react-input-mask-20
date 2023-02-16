@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import InputMask from "../src";
 
+function CustomInput(props) {
+  return <input {...props} />;
+}
+
 function Input() {
   const [value, setValue] = useState("");
 
@@ -10,7 +14,11 @@ function Input() {
     setValue(event.target.value);
   }
 
-  return <InputMask mask="99/99/9999" value={value} onChange={onChange} />;
+  return (
+    <InputMask mask="99/99/9999" value={value} onChange={onChange}>
+      <CustomInput />
+    </InputMask>
+  );
 }
 
 function escapeHtml(unsafe) {
