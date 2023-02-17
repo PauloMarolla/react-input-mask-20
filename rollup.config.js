@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import dts from "rollup-plugin-dts";
 import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import resolve from "rollup-plugin-node-resolve";
@@ -55,7 +57,6 @@ export default [
       })
     ]
   },
-
   {
     input,
     output: {
@@ -80,5 +81,15 @@ export default [
     output: { file: "lib/react-input-mask.production.min.js", format: "cjs" },
     external: isExternal,
     plugins: minifiedPlugins
+  },
+  {
+    input: "./src/types.ts",
+    output: [{ file: "dist/@types/index.d.ts", exports: "default" }],
+    plugins: [dts()]
+  },
+  {
+    input: "./src/types.ts",
+    output: [{ file: "lib/@types/index.d.ts", exports: "default" }],
+    plugins: [dts()]
   }
 ];
