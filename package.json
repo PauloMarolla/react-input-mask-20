@@ -1,7 +1,7 @@
 {
   "name": "react-input-mask-paulo",
   "description": "Masked input component for React 18",
-  "version": "3.0.0-alpha.3",
+  "version": "3.0.0-alpha.4",
   "homepage": "https://github.com/joelsonm/react-input-mask",
   "license": "MIT",
   "author": "Joelson M <joelsonm@live.com>",
