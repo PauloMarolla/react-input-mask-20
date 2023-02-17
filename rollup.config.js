@@ -84,12 +84,12 @@ export default [
   },
   {
     input: "./src/types.ts",
-    output: [{ file: "dist/@types/index.d.ts", exports: "default" }],
+    output: [{ file: "dist/@types/index.d.ts", format: "esm" }],
     plugins: [dts()]
   },
   {
     input: "./src/types.ts",
-    output: [{ file: "lib/@types/index.d.ts", exports: "default" }],
+    output: [{ file: "lib/@types/index.d.ts", format: "esm" }],
     plugins: [dts()]
   }
 ];

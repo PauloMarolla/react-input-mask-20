@@ -51,7 +51,8 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
    */
   beforeMaskedStateChange?(states: BeforeMaskedStateChangeStates): InputState;
 }
-
-interface ReactInputMask extends React.Component<Props> {
+/**
+ * 
+ */class ReactInputMask extends React.Component<Props> {
 }
 export default ReactInputMask;
