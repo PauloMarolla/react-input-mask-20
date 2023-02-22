@@ -20,9 +20,11 @@ If you need support for older versions, use [version 2](https://www.npmjs.com/pa
 # Installation
 
 **npm**
+
 ```npm install react-mask-input --save```
 
 **yarn**
+
 ```yarn add react-mask-input -D```
   
 
@@ -356,4 +358,4 @@ cy.get("input")
 ````
 
  ### Author 🤝
-  **react-mask-input** uses **react-input-mask** and **react-input-mask-next** as a base. Both libraries are having problems in the React 18 version, so I cloned the project and fixed the bugs and created **react-mask-input**.
+  **react-mask-input** uses **react-input-mask** and **react-input-mask-next** as a base. Both libraries are having bugs in the React 18 version, so I cloned the project and fixed the bugs and created **react-mask-input**.
